@@ -5,17 +5,11 @@ global:
 
 scrape_configs:
   - job_name: 'node'
-    static_configs:
-      - targets: ['localhost:9090', '172.31.80.183:9100', '172.31.80.5:9100']
-   
-   
-   
-   
-#     ec2_sd_configs:
-#       - region: us-east-2
-#         access_key: yourkey
-#         secret_key: yourkey
-#         port: 9100
+    ec2_sd_configs:
+      - region: us-east-2
+        access_key: yourkey
+        secret_key: yourkey
+        port: 9100
       
 # scrape_configs:
 #   - job_name: 'node'
